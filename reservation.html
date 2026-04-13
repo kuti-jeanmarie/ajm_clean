@@ -1,0 +1,130 @@
+<!-- reservation.html - Page Réservation -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJM CLEAN - Réservation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-broom"></i>
+                <span>AJM CLEAN</span>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="products.html" class="nav-link">Produits</a></li>
+                <li><a href="reservation.html" class="nav-link active">Réservation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="reservation-section">
+            <div class="reservation-container">
+                <div class="reservation-header">
+                    <h1>Réservez vos <span class="highlight">détergents</span></h1>
+                    <p>Remplissez le formulaire ci-dessous pour passer votre commande</p>
+                </div>
+
+                <div id="formSuccess" class="success-message"></div>
+
+                <form id="reservationForm" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nom</label>
+                            <input type="text" id="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Prénom</label>
+                            <input type="text" id="prenom" placeholder="Votre prénom" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Adresse</label>
+                        <input type="text" id="adresse" placeholder="Votre adresse complète" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-tint"></i> Quantité (Litres)</label>
+                        <select id="quantiteL" required>
+                            <option value="">Sélectionnez la quantité</option>
+                            <option value="1">1 Litre</option>
+                            <option value="2">2 Litres</option>
+                            <option value="5">5 Litres</option>
+                            <option value="10">10 Litres</option>
+                            <option value="15">15 Litres</option>
+                            <option value="20">20 Litres</option>
+                            <option value="25">25 Litres</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-box"></i> Type de détergent</label>
+                        <select id="produit" required>
+                            <option value="">Sélectionnez un produit</option>
+                            <option value="Multi-Express">AJM Multi-Express</option>
+                            <option value="Sanit'Ultra">AJM Sanit'Ultra</option>
+                            <option value="Eco Insect Stop">AJM Eco Insect Stop</option>
+                            <option value="Maxi Pro">AJM Maxi Pro</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-check-circle"></i> Confirmer la réservation
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4><i class="fas fa-broom"></i> AJM CLEAN</h4>
+                <p>Solutions professionnelles de nettoyage depuis 2015.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> <span class="placeholder-data">Notre adresse : </span><span class="editable-placeholder">__________</span></li>
+                    <li><i class="fas fa-envelope"></i> <span class="placeholder-data">Email : </span><span class="editable-placeholder">__________</span></li>
+                    <li><i class="fas fa-phone-alt"></i> <span class="placeholder-data">Téléphone : </span><span class="editable-placeholder">__________</span></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="social-placeholder-note">(liens à configurer)</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AJM CLEAN - Nettoyage professionnel</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
