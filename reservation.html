@@ -18,13 +18,13 @@
                 <i class="fas fa-broom"></i>
                 <span>AJM CLEAN</span>
             </div>
-            <div class="nav-toggle">
+            <div class="nav-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Accueil</a></li>
-                <li><a href="about.html" class="nav-link">À propos</a></li>
-                <li><a href="products.html" class="nav-link">Produits</a></li>
+                <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                <li><a href="produit.html" class="nav-link">Produits</a></li>
                 <li><a href="reservation.html" class="nav-link active">Réservation</a></li>
             </ul>
         </div>
@@ -117,14 +117,46 @@
                     <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
                 </div>
-                <div class="social-placeholder-note">(liens à configurer)</div>
+                <div class="social-placeholder-note"></div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 AJM CLEAN - Nettoyage professionnel</p>
+            <p> Kuti Mbenga Jean-Marie</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // MENU HAMBURGER RESPONSIVE
+        const mobileBtn = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                
+                const icon = mobileBtn.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Fermer le menu quand on clique sur un lien
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icon = mobileBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+    </script>
+    </script>
 </body>
 </html>
