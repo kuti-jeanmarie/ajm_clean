@@ -49,13 +49,19 @@ body {
 }
 
 .logo {
+    display: flex;
     font-size: 1.3rem;
     font-weight: 700;
     color: #10b981;
 }
 
-.logo i {
+/*.logo i {
     margin-right: 0.5rem;
+}*/
+.logo img{
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
 }
 
 .nav-menu {
@@ -159,13 +165,14 @@ body {
     text-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
 }
 
+
 .highlight {
     color: #10b981;
 }
 
 .hero-text p {
     font-size: 1rem;
-    color: #94a3b8;
+    color: #ffffff;
     margin-bottom: 2rem;
     line-height: 1.6;
 }
@@ -795,11 +802,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;
+    height: 600px;
     animation: changeImageAccueil 10s infinite;
 }
-@keyframes changeImageAccueil{
-    0%{background-image: url(./image/accueil1.jpg);};
-    33%{background-image:url(./image/logo.jpg);};
-    66%{background-image: url(./image/accueil33.jpg);};
+@keyframes changeImageAccueil {
+    0%{background-image: url(./image/535daa6a7424d3cf2576e7a6db50355c.jpg);}
+    33%{background-image: url(./image/accueil1.jpg);}
+    66%{background-image: url(./image/accueil33.jpg);}
+    100%{background-image: url(./image/accueil2.jpg);}
 }
